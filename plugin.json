@@ -1,0 +1,8 @@
+{
+  "name": "greeting-card-pdf",
+  "version": "1.0.0",
+  "description": "Generate print-ready quarter-fold greeting card PDFs from images. Prints on 8.5x11\" letter paper, folds into a 4.25x5.5\" card with front image, inside message, and back branding.",
+  "author": "Jack Reis",
+  "license": "MIT",
+  "setup": "bash setup.sh"
+}

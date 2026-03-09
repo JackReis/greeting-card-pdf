@@ -1,0 +1,6 @@
+# Greeting Card PDF Settings
+
+# Text displayed on the back panel of every card.
+# On first use, Claude will ask you to personalize this.
+# Override per-card with --back-text flag.
+back_text: © 2026 Your Name Here

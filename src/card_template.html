@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page {
+    size: 8.5in 11in;
+    margin: 0;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 8.5in;
+    height: 11in;
+    overflow: hidden;
+  }
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 8.5in;
+    height: 11in;
+  }
+  /* Top-left: BACK (rotated 180°) */
+  .back {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.5in;
+    transform: rotate(180deg);
+  }
+  .back-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 7pt;
+    color: #b0b0b0;
+    text-align: center;
+  }
+  /* Top-right: FRONT (rotated 180°, image fitted to panel) */
+  .front {
+    overflow: hidden;
+    transform: rotate(180deg);
+  }
+  .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  /* Bottom-left: INSIDE-LEFT (printed message) */
+  .inside-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5in;
+  }
+  .left-message {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16pt;
+    color: #333333;
+    text-align: center;
+    line-height: 1.5;
+  }
+  /* Bottom-right: INSIDE-RIGHT (message) */
+  .inside-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5in;
+  }
+  .message {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16pt;
+    color: #333333;
+    text-align: center;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="back">
+    <span class="back-text">{back_text}</span>
+  </div>
+  <div class="front">
+    <img src="{image_data_uri}" alt="Card front">
+  </div>
+  <div class="inside-left">
+    <div class="left-message">{left_message}</div>
+  </div>
+  <div class="inside-right">
+    <div class="message">{message}</div>
+  </div>
+</div>
+</body>
+</html>
