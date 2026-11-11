@@ -1,6 +1,8 @@
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
+Read and follow [AGENTS.md](AGENTS.md).
+
 This project is indexed by GitNexus as **greeting-card-pdf** (97 symbols, 178 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
