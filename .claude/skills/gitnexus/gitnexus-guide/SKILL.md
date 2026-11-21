@@ -19,7 +19,7 @@ When the user explicitly chooses GitNexus for code understanding, debugging, imp
 2. **Match your task to a skill below** and **read that skill file**
 3. **Follow the skill's workflow and checklist**
 
-> If step 1 warns the index is stale, run `npx gitnexus analyze` in the terminal first.
+> If the index is stale, use direct source inspection unless the user explicitly requests a rebuild.
 
 ## Skills
 

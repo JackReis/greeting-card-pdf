@@ -27,7 +27,7 @@ Use this skill only when the user explicitly requests GitNexus. It is not a prer
 5. READ gitnexus://repo/{name}/process/{name}      → Trace full execution flow
 ```
 
-> If step 2 says "Index is stale" → run `npx gitnexus analyze` in terminal.
+> If the index is stale, use direct source inspection unless the user explicitly requests a rebuild.
 
 ## Checklist
 
