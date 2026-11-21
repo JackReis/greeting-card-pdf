@@ -1,7 +1,11 @@
 ---
 name: gitnexus-exploring
-description: "Use when the user asks how code works, wants to understand architecture, trace execution flows, or explore unfamiliar parts of the codebase. Examples: \"How does X work?\", \"What calls this function?\", \"Show me the auth flow\""
+description: "Optional GitNexus workflow. Use only when the user explicitly requests GitNexus; never a prerequisite for ordinary code work."
 ---
+
+## Optional scope
+
+Use this skill only when the user explicitly requests GitNexus. It is not a prerequisite for exploring, editing, refactoring, reviewing, or committing code. Do not invoke it or reindex automatically. Otherwise, trace direct callers and imports in source, inspect the diff, and run the relevant normal tests and checks.
 
 # Exploring Codebases with GitNexus
 
@@ -23,7 +27,7 @@ description: "Use when the user asks how code works, wants to understand archite
 5. READ gitnexus://repo/{name}/process/{name}      → Trace full execution flow
 ```
 
-> If step 2 says "Index is stale" → run `npx gitnexus analyze` in terminal.
+> If the index is stale, use direct source inspection unless the user explicitly requests a rebuild.
 
 ## Checklist
 

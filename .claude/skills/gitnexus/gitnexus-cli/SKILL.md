@@ -1,7 +1,11 @@
 ---
 name: gitnexus-cli
-description: "Use when the user needs to run GitNexus CLI commands like analyze/index a repo, check status, clean the index, generate a wiki, or list indexed repos. Examples: \"Index this repo\", \"Reanalyze the codebase\", \"Generate a wiki\""
+description: "Optional GitNexus workflow. Use only when the user explicitly requests GitNexus; never a prerequisite for ordinary code work."
 ---
+
+## Optional scope
+
+Use this skill only when the user explicitly requests GitNexus. It is not a prerequisite for exploring, editing, refactoring, reviewing, or committing code. Do not invoke it or reindex automatically. Otherwise, trace direct callers and imports in source, inspect the diff, and run the relevant normal tests and checks.
 
 # GitNexus CLI Commands
 
@@ -23,7 +27,7 @@ Run from the project root. This parses all source files, builds the knowledge gr
 | `--embeddings` | Enable embedding generation for semantic search (off by default) |
 | `--drop-embeddings` | Drop existing embeddings on rebuild. By default, an `analyze` without `--embeddings` preserves them. |
 
-**When to run:** First time in a project, after major code changes, or when `gitnexus://repo/{name}/context` reports the index is stale. In Claude Code, a PostToolUse hook runs `analyze` automatically after `git commit` and `git merge`, preserving embeddings if previously generated.
+**When to run:** Only when the user explicitly requests that you build or refresh the index. If the index is missing or stale and no rebuild was requested, inspect the source directly. Do not configure automatic indexing hooks for this repository.
 
 ### status — Check index freshness
 
